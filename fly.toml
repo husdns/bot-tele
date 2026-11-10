@@ -1,10 +1,9 @@
-app = "REPLACE_WITH_YOUR_FLY_APP_NAME"
+
+app = "bot-tele-8u3njg"
 primary_region = "fra"
 
-[processes]
-  worker = "python main.py"
+[build]
+  dockerfile = "Dockerfile"
 
-[[vm]]
-  size = "shared-cpu-1x"
-  memory = "256mb"
-  processes = ["worker"]
+[processes]
+  app = "python main.py"
