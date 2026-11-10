@@ -6,9 +6,4 @@ primary_region = "fra"
   dockerfile = "Dockerfile"
 
 [processes]
-  worker = "python main.py"
-
-[[vm]]
-  size = "shared-cpu-1x"
-  memory = "512mb"
-  processes = ["worker"]
+  app = "python main.py"
