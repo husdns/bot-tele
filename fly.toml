@@ -1,9 +1,14 @@
 
-app = "bot-tele-8u3njg"
+app = "bot-tele-qzhkvg"
 primary_region = "fra"
 
 [build]
   dockerfile = "Dockerfile"
 
 [processes]
-  app = "python main.py"
+  worker = "python main.py"
+
+[[vm]]
+  size = "shared-cpu-1x"
+  memory = "512mb"
+  processes = ["worker"]
